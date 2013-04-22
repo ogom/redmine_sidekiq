@@ -1,0 +1,36 @@
+<h2>Sidekiq Sandbox</h2>
+
+<hr>
+
+<h3>Stats</h3>
+
+<p>stats = Sidekiq::Stats.new</p>
+
+<h4>The number of jobs that have been processed.</h4>
+<p>stats.processed # => <%= @stats.processed %></p>
+
+<h4>The number of jobs that have failed.</h4>
+<p>stats.failed # => <%= @stats.failed %></p>
+
+<h4>The queues with name and number enqueued.</h4>
+<p>stats.queues # => <%= @stats.queues %></p>
+
+<h4>The number of jobs enqueued in all queues (does NOT include retries and scheduled jobs).</h4>
+<p>stats.enqueued # => <%= @stats.enqueued %></p>
+
+<hr>
+
+<h3>Jobs</h3>
+
+<h4>The standard.</h4>
+<p><%= link_to('perform_async(*args)', sidekiq_sandbox_perform_async_path, method: :post) %></p>
+
+<h4>The Scheduled Jobs by interval.</h4>
+<p><%= link_to('perform_in(interval, *args)', sidekiq_sandbox_perform_in_path(interval: 1), method: :post) %></p>
+
+<h4>The Scheduled Jobs by timestamp.</h4>
+<p><%= link_to('perform_at(timestamp, *args)', sidekiq_sandbox_perform_at_path(interval: 1), method: :post) %></p>
+
+<h4>The job will fail.</h4>
+<p><%= link_to('perform_async()', sidekiq_sandbox_perform_async_path(name: :failed), method: :post) %></p>
+

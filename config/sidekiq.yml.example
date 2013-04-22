@@ -1,0 +1,13 @@
+development:
+  redis:
+    url: redis://localhost:6379/8
+    namespace: mynamespace
+  status:
+    expiration: 30
+
+production:
+  redis:
+    url: redis://localhost:6379/8
+    namespace: mynamespace
+  status:
+    expiration: 30
