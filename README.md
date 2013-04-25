@@ -1,7 +1,7 @@
 Redmine Sidekiq
 ===============
 
-Background jobs will use the [Sidekiq](https://github.com/mperham/sidekiq) on Redmine.
+Background jobs will use the [Sidekiq](https://github.com/mperham/sidekiq) on Redmine.  
 You can Monitoring easily used by [Sidekiq plugin](http://www.redmine.org/plugins/sidekiq).
 
 ## Features
