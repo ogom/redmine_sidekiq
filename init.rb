@@ -4,7 +4,7 @@ require 'redmine_sidekiq/rails'
 Redmine::Plugin.register :redmine_sidekiq do
   name 'Redmine Sidekiq plugin'
   description 'This is a Sidekiq plugin for Redmine'
-  version '0.0.2'
+  version '1.0.0'
   url 'https://github.com/ogom/redmine_sidekiq'
   author_url 'mailto:ogom@hotmail.co.jp'
   author 'ogom'
