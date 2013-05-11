@@ -1,35 +1,36 @@
-<h2>Sidekiq Sandbox</h2>
+<h2><%= l :sidekiq %></h2>
+<h3>Sandbox</h3>
 
 <hr>
 
-<h3>Stats</h3>
+<h4>Stats</h4>
 
-<p>stats = Sidekiq::Stats.new</p>
+<div class="box">stats = Sidekiq::Stats.new</div>
 
-<h4>The number of jobs that have been processed.</h4>
-<p>stats.processed # => <%= @stats.processed %></p>
+<p>Gets the number of jobs that have been processed.</p>
+<div class="box">stats.processed # => <%= @stats.processed %></div>
 
-<h4>The number of jobs that have failed.</h4>
-<p>stats.failed # => <%= @stats.failed %></p>
+<p>The number of jobs that have failed.</p>
+<div class="box">stats.failed # => <%= @stats.failed %></div>
 
-<h4>The queues with name and number enqueued.</h4>
-<p>stats.queues # => <%= @stats.queues %></p>
+<p>The queues with name and number enqueued.</p>
+<div class="box">stats.queues # => <%= @stats.queues %></div>
 
-<h4>The number of jobs enqueued in all queues (does NOT include retries and scheduled jobs).</h4>
-<p>stats.enqueued # => <%= @stats.enqueued %></p>
+<p>The number of jobs enqueued in all queues (does NOT include retries and scheduled jobs).</p>
+<div class="box">stats.enqueued # => <%= @stats.enqueued %></div>
 
-<hr>
+&nbsp;
 
-<h3>Jobs</h3>
+<h4>Jobs</h4>
 
-<h4>The standard.</h4>
-<p><%= link_to('perform_async(*args)', sidekiq_sandbox_perform_async_path, method: :post) %></p>
+<p>The standard.</p>
+<div class="box"><%= link_to('perform_async(*args)', sidekiq_sandbox_perform_async_path, method: :post) %></div>
 
-<h4>The Scheduled Jobs by interval.</h4>
-<p><%= link_to('perform_in(interval, *args)', sidekiq_sandbox_perform_in_path(interval: 1), method: :post) %></p>
+<p>The Scheduled Jobs by interval.</p>
+<div class="box"><%= link_to('perform_in(interval, *args)', sidekiq_sandbox_perform_in_path(interval: 1), method: :post) %></div>
 
-<h4>The Scheduled Jobs by timestamp.</h4>
-<p><%= link_to('perform_at(timestamp, *args)', sidekiq_sandbox_perform_at_path(interval: 1), method: :post) %></p>
+<p>The Scheduled Jobs by timestamp.</p>
+<div class="box"><%= link_to('perform_at(timestamp, *args)', sidekiq_sandbox_perform_at_path(interval: 1), method: :post) %></div>
 
-<h4>The job will fail.</h4>
-<p><%= link_to('perform_async()', sidekiq_sandbox_perform_async_path(name: :failed), method: :post) %></p>
+<p>The job will fail.</p>
+<div class="box"><%= link_to('perform_async()', sidekiq_sandbox_perform_async_path(name: :failed), method: :post) %></div>

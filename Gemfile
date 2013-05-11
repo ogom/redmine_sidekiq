@@ -1,5 +1,5 @@
 gem 'sidekiq'
-gem 'slim'
+gem 'slim', '>= 1.3.0'
 gem 'sinatra', '>= 1.3.0', :require => nil
 
 gem 'sidekiq-status'
