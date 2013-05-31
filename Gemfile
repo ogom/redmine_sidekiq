@@ -7,3 +7,4 @@ gem 'sidekiq-unique-jobs'
 gem 'sidekiq-failures'
 
 gem 'clockwork'
+gem 'daemons'
