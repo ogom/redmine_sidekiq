@@ -25,5 +25,13 @@ module RedmineSidekiq
         chain.add Sidekiq::Status::ClientMiddleware
       end
     end
+
+    Sidekiq::Extensions::ActiveRecord.module_eval do
+      remove_method :delay if respond_to?(:delay)
+    end
+
+    Sidekiq::Extensions::ActionMailer.module_eval do
+      remove_method :delay if respond_to?(:delay)
+    end
   end
 end
