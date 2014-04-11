@@ -25,7 +25,7 @@ module RedmineSidekiq
     end
     
     Sidekiq::Extensions::Klass.module_eval do
-      remove_method :delay if respond_to(:delay)
+      remove_method :delay if respond_to?(:delay)
     end
     
   end
