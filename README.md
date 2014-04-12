@@ -8,6 +8,7 @@ You can Monitoring easily used by [Sidekiq plugin](http://www.redmine.org/plugin
 
 * Administrator can use the Sidekiq Web UI from the top menu.
 * Add to autoload_paths of the Plugin `/app/workers`.
+* IMPORTANT: Anyone trying to use the sidekiq `:delay` method, use `:sidekiq_delay` instead because for former has clashes with Redmine safe attributes. There is NO change for `:delay_for` and `:delay_until` methods.
 
 ## Installation
 
