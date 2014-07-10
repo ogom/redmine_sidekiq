@@ -23,10 +23,12 @@ module RedmineSidekiq
     Sidekiq::Extensions::ActionMailer.module_eval do
       remove_method :delay if respond_to?(:delay)
     end
-    
+
     Sidekiq::Extensions::Klass.module_eval do
       remove_method :delay if respond_to?(:delay)
     end
-    
+
+    Sidekiq.remove_delay! if Sidekiq.methods.index(:remove_delay!)
+
   end
 end
