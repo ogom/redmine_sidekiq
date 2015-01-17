@@ -9,5 +9,5 @@ Redmine::Plugin.register :redmine_sidekiq do
   author_url 'mailto:ogom@hotmail.co.jp'
   author 'ogom'
 
-  menu :top_menu, :sidekiq, 'sidekiq', :if => Proc.new {User.current.admin}
+  menu :top_menu, :sidekiq, '/sidekiq', :if => Proc.new {User.current.admin}
 end
