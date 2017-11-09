@@ -44,7 +44,7 @@ It appears in the top menu.
 Example of Sidekiq worker.
 
 ```
-./plugins/redmine_sidekiq/workers/sandbox_worker.rb
+./plugins/redmine_sidekiq/app/workers/sandbox_worker.rb
 ```
 
 ### Sandbox Web UI
@@ -64,7 +64,7 @@ Enqueue, click the `perform_async(*args)` of the Jobs.
 Enqueue from the command line.
 
 ```
-$ script/rails runner 'SandboxWorker.perform_async'
+$ bin/rails runner 'SandboxWorker.perform_async'
 ```
 
 ## License
