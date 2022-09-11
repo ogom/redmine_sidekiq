@@ -7,9 +7,9 @@ end
 
 module RedmineSidekiq
   class Configure
-    file = File.join(Rails.root, 'plugins/redmine_sidekiq/config/sidekiq.yml')
+    file = File.join(::Rails.root, 'plugins/redmine_sidekiq/config/sidekiq.yml')
     if File.exist?(file)
-      config = YAML.load_file(file)[Rails.env]
+      config = YAML.load_file(file)[::Rails.env]
       redis_conf = config['redis'].symbolize_keys
     end
 
