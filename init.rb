@@ -1,3 +1,5 @@
+$LOAD_PATH.unshift "#{File.dirname(__FILE__)}/lib"
+
 require 'redmine_sidekiq/configure'
 require 'redmine_sidekiq/rails'
 
